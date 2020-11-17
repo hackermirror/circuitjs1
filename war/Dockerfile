@@ -1,4 +1,5 @@
-# we are extending everything from tomcat:8.0 image ...
+# to build: docker build --no-cache -t circuitjs1 .
+# to run: docker run -p 8080:80 cirjs1tj
 FROM httpd:2.4-alpine
 RUN apk add --no-cache git
 RUN git clone https://github.com/raquelhortab/circuitjs1.git
