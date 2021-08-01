@@ -7,11 +7,11 @@ if [ "$BUILD_ENV" = "development" ]; then
   echo "We are in development, making some changes"
   mkdir circuitjs1/war/dev
   cp circuitjs1/war/circuitjs.html circuitjs1/war/dev/circuitjs.html
-  sed -i "252s|.*|$DEV_SCRIPT|" circuitjs1/war/dev/circuitjs.html
+  sed -i "176s|.*|$DEV_SCRIPT|" circuitjs1/war/dev/circuitjs.html
   cp circuitjs1/war/dev/circuitjs.html circuitjs1/war/circuitjs.html
   cp -r circuitjs1/war/. /usr/local/apache2/htdocs/
   echo "Changed the communication script url, now being:"
-  awk 'NR==252' /usr/local/apache2/circuitjs1/war/circuitjs.html
+  awk 'NR==176' /usr/local/apache2/circuitjs1/war/circuitjs.html
 else
   echo "We are in production so no changes where made"
 fi
